@@ -17,7 +17,10 @@ function App() {
 
   const addItem = item => {
     // add the given item to the cart
-    setCart([...cart, item]);
+    if (cart.includes(item)) {
+    } else {
+      setCart([...cart, item]);
+    }
   };
 
   const removeItem = item => {
